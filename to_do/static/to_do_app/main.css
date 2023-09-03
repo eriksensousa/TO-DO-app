@@ -1,0 +1,274 @@
+body {
+    max-width: 100%;
+    /* background-image: url('body_background.png');*/
+}
+
+.main-container {
+    margin-top: 100px;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
+.table td {
+    padding-left: 20px;
+    background-color: beige;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.form-check-input {
+    width: 25px;
+    height: 25px;
+}
+
+.form-control {
+    max-width: 100%;
+}
+
+.button-row {
+    text-align: right;
+}
+
+.completed_tasks {
+    color: red;
+    text-decoration: line-through;
+}
+
+.main-header {
+    background-color: indigo;
+    max-width: 100%;
+    height: 80px;
+    color: white;
+    padding: 14px;
+}
+
+.title-header {
+    text-align: center;
+}
+
+.thead-green {
+    background-color: #81b54e;
+}
+
+.btn-signup {
+    color: #f8f9fa;
+    background-color: #2055dc;
+}
+
+.btn-side {
+    background-color: #dc3545;
+    border: none;
+    border-radius: 10%;
+    color: white;
+    padding: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.profile-container {
+    margin-top: 10%;
+}
+
+.bg-indigo {
+    background-color: indigo;
+}
+
+#list-container1, #list-container2 {
+    text-align: center;
+    /*padding: 20px;*/
+    width: 90%;
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    display: table;
+    /*border-radius: 30px;*/
+}
+
+.auth-section {
+    width: 65%;
+    /*border: 1px solid #dad34861;
+    padding: 18px;
+    background-color: #dad34861;
+    border-radius: 12px;*/
+}
+
+.account-img {
+    width: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.media {
+    align-items: center;
+    background-color: rgb(248, 247, 240);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#add_task {
+    font-size: 20px;
+}
+
+/*
+table>table {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+*/
+
+.content-section {
+    width: 80%;
+    margin: auto;
+}
+
+.fa {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.homepage_title {
+    color: white;
+    font-size: 65px;
+}
+
+.homepage_div {
+    background-color: #101010ad;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tag_line {
+    color: rgb(233, 241, 107);
+    font-size: 18px;
+    font-family: cursive;
+}
+
+.homepage_buttons {
+    padding: 10px;
+    font-size: 22px;
+    border-radius: 36px;
+    width: 120px;
+}
+
+#tag_line {
+    display: none;
+}
+
+.btn_my_tasks {
+    color: white;
+    background-color: darkblue;
+    border-radius: 20px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.btn_my_tasks:hover {
+    color: rgba(233, 236, 15, 0.979);
+}
+
+footer {
+    padding: 8px;
+    background-color: #2f2d2d;
+    color: white;
+    text-align: center;
+}
+
+.list_name {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.list_name_div {
+    width: 90%;
+    padding: 5px;
+    background-color: darkcyan;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 30px;
+}
+
+.user_tasks {
+    max-width: 100%;
+}
+
+#add_task_btn {
+    border-radius: 18px;
+    float: right;
+}
+
+.active_tasks_profile {
+    color: red;
+    background-color: rgb(241 215 215);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+}
+
+.completed_tasks_profile {
+    color: green;
+    background-color: rgb(180, 233, 180);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+}
+
+table {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ul {
+    padding-inline-start: 22px;
+}
+
+.nav-item a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+.sect_container {
+    background-color: #dc3545;
+}
+
+.text-left {
+    font-size: 1.25rem;
+}
+
+/* CSS for Mobile Phone Screens */
+
+@media only screen and (max-width: 600px) {
+    .form-check-input {
+        width: 22px;
+        height: 22px;
+    }
+    .main-container {
+        margin-top: 80px;
+    }
+    .text-left {
+        font-size: 15px;
+        display: table-row;
+    }
+    .fa {
+        font-size: 22px;
+    }
+    #add_task {
+        font-size: smaller;
+    }
+    #list-container1, #list-container2 {
+        padding: 0;
+    }
+    .content-section {
+        width: 100%;
+    }
+    .media-body {
+        text-align: center;
+    }
+    td:first-child {
+        padding-left: 24px;
+    }
+    .homepage_title {
+        font-size: 55px;
+    }
+    .active_heading, .completed_heading {
+        font-size: 22px;
+    }
+    #add_task_btn, #clear_all_completed_tasks {
+        font-size: 12px;
+    }
+    .auth-section {
+        width: auto;
+    }
+    .brand_name {
+        font-size: 32px;
+        vertical-align: text-top;
+    }
+}

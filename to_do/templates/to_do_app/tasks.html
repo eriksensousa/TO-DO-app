@@ -1,0 +1,90 @@
+{% extends "to_do_app/base.html" %}
+{% block content %}
+<!--
+<div class="container list_name_div">
+	<h2 class="list_name">To-Do List</h2>
+</div>
+-->
+
+<div class="container" id="list-container1">
+
+	<table class="table table-hover" id="maintable">
+		<thead class="thead-dark">
+			<th colspan=4>
+				<h3 class="active_heading">Active Tasks</h3>
+			</th>
+		</thead>
+
+		<tbody>
+			<tr>
+				<form action="">
+					<td colspan=3>
+						<input type="text" name="task" style="float: left;" class="form-control" id="add_task"
+							placeholder="Enter your Task (Max. 60 characters)" maxlength="60" autofocus>
+					</td>
+					<td>
+						<button type="submit" class="btn btn-success" id="add_task_btn"
+							title="Add a New Task">Add</button>
+					</td>
+				</form>
+			</tr>
+			{% for task in tasks %}
+			{% if not task.is_checked %}
+			<tr class="task_{{ task.id }}">
+				<td><input type="checkbox" title="Mark as Complete" class="form-check-input mark_as_done"
+						id="{{ task.id }}"></td>
+				<td colspan="2">
+					<h4 class="text-left" id="title{{ task.id }}">{{ task.task_title }}</h4>
+				</td>
+				<td>
+
+					<i class="fa fa-pencil-square-o update_btns" title="Edit Task" style='color:#0ba8c1;'></i>
+					<i class="fa fa-check update_task_btn" title="Update"
+						style="color: rgb(16, 172, 211); display: none;"></i>
+					<i class="fa fa-close deleterow delete_existing_row" title="Delete Task"
+						style='color:red; float:right;'></i>
+
+			</tr>
+			{% endif %}
+			{% endfor %}
+		</tbody>
+	</table>
+	<small class="text-muted timestamp">Last modified on: {{ max_date|date:"F j, Y" }}</small>
+</div>
+
+<div class="container" id="list-container2">
+	<table class="table mt-3" id="completed-table">
+		<thead class="thead-green">
+			<th colspan=4>
+				<h3 class="completed_heading">Completed Tasks</h3>
+			</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan=4>
+					<button type="button" class="btn btn-danger" id="clear_all_completed_tasks"><strong>Clear All
+							Completed Tasks</strong></button>
+				</td>
+			</tr>
+			{% for task in tasks %}
+			{% if task.is_checked %}
+			<tr class="task_{{ task.id }}">
+				<td>
+
+					<input type="checkbox" title="Mark as Incomplete" class="form-check-input mark_as_undone"
+						id="{{ task.pk }}" checked>
+				</td>
+				<td>
+					<h4 class="text-left completed_tasks" id="title{{ task.pk }}">{{ task.task_title }}</h4>
+				</td>
+				<td class="button-row"></td>
+			</tr>
+			{% endif %}
+			{% endfor %}
+
+		</tbody>
+	</table>
+
+</div>
+
+{% endblock content %}
